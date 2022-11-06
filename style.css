@@ -16,14 +16,16 @@ html {
  /*   grid-template-rows: repeat(4, 198px);*/
     /*  grid-template-rows: repeat(4, 148px);*/
  /*  grid-template-rows: 1fr, 1fr, 1fr, 1fr;*/
-    grid-template-rows: repeat(4, clamp(152px, 20%, 400px));
+   grid-template-rows: repeat(4, clamp(152px, 20%, 400px));
  /*  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));*/
   /* grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));*/
   /* grid-template-rows: repeat(auto-fit, 300px);*/
     /*grid-template-rows: repeat(4, minmax(152px, 100%));*/
    /*  grid-template-rows: repeat(4, minmax(152px, 1fr ));*/
    /* grid-template-columns: 1fr, 1fr, 1fr;*/
-   grid-template-columns: repeat(3, clamp(1fr, 20%, 200px));
+ /*  grid-template-columns: repeat(3, clamp(1fr, 20%, 200px));*/
+
+   grid-template-columns: fit-content(auto) fit-content(auto) fit-content(auto);
 
 }
 
@@ -102,6 +104,7 @@ button {
 .wrapper {
     display: flex;
     flex-direction: row;
+    height: 58px;
 }
 
 .wrapper > div {
