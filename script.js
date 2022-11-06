@@ -19,7 +19,6 @@ function validateForm() {
             valid = false;
         } else {
             document.getElementById('passwordAlert').innerHTML = "";
-
         }
 
         if (confirmPassword == "") {
@@ -28,7 +27,6 @@ function validateForm() {
         }
         else {
             document.getElementById('confirmPasswordAlert').innerHTML = "";
-
         }
 
     } else if (password !== confirmPassword) {
@@ -41,13 +39,11 @@ function validateForm() {
         valid = false;
 
     } else if (password === confirmPassword) {
-
         document.getElementById("passwordAlert").innerHTML = "";
         document.getElementById("alertMessage").innerHTML = "";
         document.getElementById("confirmPasswordAlert").innerHTML = "";
         document.getElementById("password").style.border = "1px solid gray";
         document.getElementById("confirm_password").style.border = "1px solid gray";
-
     }
 
     if (document.getElementById('first_name').value == "") {
@@ -58,35 +54,31 @@ function validateForm() {
 
     }
 
-
     if (document.getElementById('last_name').value == "") {
         document.getElementById('lnameAlert').innerHTML = "*";
         valid = false;
     } else {
         document.getElementById('lnameAlert').innerHTML = "";
-
     }
 
-                    /*********Email***** */
- var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    /*********Email***** */
+    var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     if (document.getElementById('email').value == "") {
 
         document.getElementById('emailAlert').innerHTML = "*";
         valid = false;
-    } else  if (document.getElementById('email').value != ""){
+    } else if (document.getElementById('email').value != "") {
 
-        if(document.getElementById('email').value.match(mailformat))
-    {
-          document.getElementById("emailAlert").innerHTML = "";
+        if (document.getElementById('email').value.match(mailformat)) {
+            document.getElementById("emailAlert").innerHTML = "";
+        }
+        else {
+            document.getElementById("invalidEmail").innerHTML = "Invalid email address";
+            valid = false;
+        }
     }
-    else{
-        document.getElementById("emailAlert").innerHTML = "Invalid email address";
-        valid = false;
-    }
-}
 
-
-                   /*********Phone****** */
+                                     /*********Phone****** */
 
     var phoneformat = /^\+(?:[0-9] ?){6,14}[0-9]$/;
 
@@ -94,21 +86,20 @@ function validateForm() {
 
         document.getElementById('phoneAlert').innerHTML = "*";
         valid = false;
-        
-    } else if (document.getElementById('phone').value != ""){
+    } else if (document.getElementById('phone').value != "") {
 
-
-        if(document.getElementById('phone').value.match(phoneformat))
-        {
-               document.getElementById("phoneAlert").innerHTML = "";
+        if (document.getElementById('phone').value.match(phoneformat)) {
+            document.getElementById("phoneAlert").innerHTML = "";
         }
-        else{
-            document.getElementById("phoneAlert").innerHTML = "Invalid phone number";
+        else {
+            document.getElementById("invalidPhone").innerHTML = "Invalid phone number";
             valid = false;
         }
 
     }
-}              /*******************/
+}   
+                           /*******************/
+
 document.getElementById("resetBtn").addEventListener("click", function () {
 
     document.getElementById("password").style.border = "1px solid gray";
@@ -120,5 +111,7 @@ document.getElementById("resetBtn").addEventListener("click", function () {
     document.getElementById('emailAlert').innerHTML = "";
     document.getElementById('lnameAlert').innerHTML = "";
     document.getElementById('fnameAlert').innerHTML = "";
+    document.getElementById("invalidEmail").innerHTML = "";
+    document.getElementById("invalidPhone").innerHTML = "";
 
 });
