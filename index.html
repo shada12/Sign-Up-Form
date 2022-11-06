@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <!------- Script --------->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <title>Sign-Up-Form</title>
 </head>
-
 <body>
-
+    
     <div class="maindiv">
         <div class="div1">
             <div class="logo">
@@ -38,12 +36,13 @@
                         <div>
                             <span id="fnameAlert"></span>
                             <label for="first_name">First Name</label><br>
-                            <input type="text" name="first_name" id="first_name" placeholder="Enter First Name" required>  
+                            <input type="text" name="first_name" id="first_name" placeholder="Enter First Name"
+                                required>
                         </div>
                         <div>
                             <span id="lnameAlert"></span>
                             <label for="last_name">Last Name</label><br>
-                            <input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" required>      
+                            <input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" required>
                         </div>
                     </div>
                     <div class="wrapper">
@@ -73,7 +72,8 @@
                         </div>
                     </div>
                     <div class="wrapper">
-                        <button onclick="validateForm()" type="button" name="submit" id="submitBtn" value="submit">Create Account</button>
+                        <button onclick="validateForm()" type="button" name="submit" id="submitBtn"
+                            value="submit">Create Account</button>
                         <button type="reset" name="reset" id="resetBtn">Reset</button>
                     </div>
                 </div>
@@ -84,4 +84,5 @@
         </div>
     </div>
 </body>
+
 </html>
