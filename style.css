@@ -14,7 +14,7 @@ html {
     --tone-color: #596D48;
 }
 
-.maindiv {
+main {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr, 1fr, 1fr;
@@ -26,7 +26,7 @@ html {
     background-color: rgb(13, 251, 251);
     grid-column: 1/2;
     grid-row: 1/5;
-    background-image: url("img/beach1.jpg");
+    background-image: url("img/beach.jpg");
     background-size: cover;
 }
 
@@ -71,7 +71,7 @@ html {
 
 button {
     margin-top: 1rem;
-    margin-right: 1rem;
+    margin-right: 4rem;
     margin-left: 2rem;
     background-color: var(--tone-color);
     color: white;
@@ -93,6 +93,7 @@ button {
 }
 
 .wrapper>div {
+    width: 13rem;
     margin-top: 1rem;
     margin-left: 2rem;
     margin-right: 1rem;
@@ -139,7 +140,7 @@ label {
 
 @media only screen and (max-width: 600px) {
 
-    .maindiv {
+    main {
         display: grid;
         grid-template-rows: repeat(6, 150px);
         grid-template-columns: fit-content(auto) fit-content(auto) fit-content(auto);
@@ -149,7 +150,7 @@ label {
         background-color: rgb(13, 251, 251);
         grid-column: 1/-1;
         grid-row: 1/3;
-        background-image: url("img/beach1.jpg");
+        background-image: url("img/beach.jpg");
         background-size: cover;
     }
 
