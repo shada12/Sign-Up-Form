@@ -63,7 +63,6 @@ html {
     font-weight: 900;
     font-size: larger;
     font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
-
     /* align-items: center;
       text-align: center;
     justify-content: center;
@@ -110,7 +109,7 @@ h3 {
 }
 
 .div4 p {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     padding-left: 2rem;
 }
 

@@ -1,5 +1,3 @@
-
-
 var valid = true;
 
 function validateForm() {
@@ -32,8 +30,6 @@ function validateForm() {
 
         document.getElementById("passwordAlert").innerHTML = "*Passwords do not match";
         document.getElementById("confirmPasswordAlert").innerHTML = "";
-       // document.getElementById("passwordAlert").innerHTML = "*";
-       // document.getElementById("confirmPasswordAlert").innerHTML = "*";
         document.getElementById("password").style.border = "2px solid red";
         document.getElementById("confirm_password").style.border = "2px solid red";
         valid = false;
@@ -105,8 +101,6 @@ document.getElementById("resetBtn").addEventListener("click", function () {
     document.getElementById("confirm_password").style.border = "1px solid gray";
     document.getElementById("passwordAlert").innerHTML = "";
     document.getElementById("confirmPasswordAlert").innerHTML = "";
-  //  document.getElementById('phoneAlert').innerHTML = "";
- //   document.getElementById('emailAlert').innerHTML = "";
     document.getElementById('lnameAlert').innerHTML = "";
     document.getElementById('fnameAlert').innerHTML = "";
     document.getElementById("emailAlert").innerHTML = "";
