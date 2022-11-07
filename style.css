@@ -37,11 +37,6 @@ html {
     background-color: #f3f2ef;
 }
 
-h3 {
-    margin: 0;
-    padding: 0;
-}
-
 .div3 {
     background-color: rgb(68, 187, 68);
     grid-column: 2/4;
@@ -95,7 +90,7 @@ button {
 .wrapper {
     display: flex;
     flex-direction: row;
-    height: 60px;
+    height: 70px;
 }
 
 .wrapper>div {
@@ -110,12 +105,12 @@ a {
 }
 
 h3 {
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-left: 2rem;
 }
 
 .div4 p {
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-left: 2rem;
 }
 
@@ -130,6 +125,14 @@ span {
     font-size: small;
 }
 
+.image {
+    height: 70px;
+    width: 70px;
+}
+
+label {
+    color: rgb(50, 49, 49);
+}
 
 @media only screen and (max-width: 600px) {
 
@@ -167,13 +170,4 @@ span {
         grid-row: 6/-1;
         background-color: #f3f2ef;
     }
-}
-
-.image {
-    height: 70px;
-    width: 70px;
-}
-
-label {
-    color: rgb(50, 49, 49);
 }
