@@ -8,11 +8,9 @@ function validateForm() {
 
     if (password === "") {
         document.getElementById("passwordAlert").innerHTML = "Password is required";
-    }
-    else if (password.length >= 6) {
+    } else if (password.length >= 6) {
         document.getElementById("passwordAlert").innerHTML = "";
-    }
-    else {
+    } else {
         document.getElementById('passwordAlert').innerHTML = "Password length should be 6 or more";
     }
 
@@ -21,8 +19,7 @@ function validateForm() {
 
     } else if (confirmPassword.length >= 6) {
         document.getElementById('confirmPasswordAlert').innerHTML = "";
-    }
-    else {
+    } else {
         document.getElementById('confirmPasswordAlert').innerHTML = "Password length should be 6 or more";
     }
 
@@ -32,8 +29,7 @@ function validateForm() {
             document.getElementById("confirmPasswordAlert").innerHTML = "";
             document.getElementById("password").style.border = "1px solid gray";
             document.getElementById("confirm_password").style.border = "1px solid gray";
-        }
-        else {
+        } else {
             document.getElementById("passwordAlert").innerHTML = "*Passwords do not match";
             document.getElementById("confirmPasswordAlert").innerHTML = "*Passwords do not match";
             document.getElementById("password").style.border = "2px solid red";
@@ -60,8 +56,7 @@ function validateForm() {
 
         if (email.match(mailformat)) {
             document.getElementById("emailAlert").innerHTML = "";
-        }
-        else {
+        } else {
             document.getElementById("emailAlert").innerHTML = "Invalid email address";
         }
     }
@@ -74,8 +69,7 @@ function validateForm() {
 
         if (phone.match(phoneformat)) {
             document.getElementById("phoneAlert").innerHTML = "";
-        }
-        else {
+        } else {
             document.getElementById("phoneAlert").innerHTML = "Invalid phone number";
         }
     }
@@ -90,4 +84,3 @@ document.getElementById("resetBtn").addEventListener("click", function () {
     document.getElementById("emailAlert").innerHTML = "";
     document.getElementById("phoneAlert").innerHTML = "";
 });
-
