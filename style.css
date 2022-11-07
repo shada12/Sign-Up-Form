@@ -103,13 +103,17 @@ a {
     color: var(--tone-color);
 }
 
-h3 {
+.div3 h3 {
     padding-top: 1rem;
     padding-left: 2rem;
 }
+.div2 h3 { 
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+ }
 
 .div4 p {
-    padding-top: 1.5rem;
+    padding-top: 2rem;
     padding-left: 2rem;
 }
 
