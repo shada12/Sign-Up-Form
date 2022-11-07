@@ -1,5 +1,4 @@
 function validateForm() {
-    // let password = document.forms["myForm"]["password"].value;
     let firstName = document.getElementById('first_name').value;
     let lastName = document.getElementById('last_name').value;
     let email = document.getElementById('email').value;
