@@ -14,15 +14,14 @@ function validateForm() {
     if (password == "" || confirmPassword == "") {
 
         if (password == "") {
-            // alert("Password must be filled out");
-            document.getElementById("passwordAlert").innerHTML = "*";
+            document.getElementById("passwordAlert").innerHTML = "Password is required";
             valid = false;
         } else {
             document.getElementById('passwordAlert').innerHTML = "";
         }
 
         if (confirmPassword == "") {
-            document.getElementById("confirmPasswordAlert").innerHTML = "*";
+            document.getElementById("confirmPasswordAlert").innerHTML = "Confirm password is required";
             valid = false;
         }
         else {
@@ -31,23 +30,23 @@ function validateForm() {
 
     } else if (password !== confirmPassword) {
 
-        document.getElementById("alertMessage").innerHTML = "*Passwords do not match";
-        document.getElementById("passwordAlert").innerHTML = "*";
-        document.getElementById("confirmPasswordAlert").innerHTML = "*";
+        document.getElementById("passwordAlert").innerHTML = "*Passwords do not match";
+        document.getElementById("confirmPasswordAlert").innerHTML = "";
+       // document.getElementById("passwordAlert").innerHTML = "*";
+       // document.getElementById("confirmPasswordAlert").innerHTML = "*";
         document.getElementById("password").style.border = "2px solid red";
         document.getElementById("confirm_password").style.border = "2px solid red";
         valid = false;
 
     } else if (password === confirmPassword) {
         document.getElementById("passwordAlert").innerHTML = "";
-        document.getElementById("alertMessage").innerHTML = "";
         document.getElementById("confirmPasswordAlert").innerHTML = "";
         document.getElementById("password").style.border = "1px solid gray";
         document.getElementById("confirm_password").style.border = "1px solid gray";
     }
 
     if (document.getElementById('first_name').value == "") {
-        document.getElementById('fnameAlert').innerHTML = "*";
+        document.getElementById('fnameAlert').innerHTML = "First name is required";
         valid = false;
     } else {
         document.getElementById('fnameAlert').innerHTML = "";
@@ -55,17 +54,17 @@ function validateForm() {
     }
 
     if (document.getElementById('last_name').value == "") {
-        document.getElementById('lnameAlert').innerHTML = "*";
+        document.getElementById('lnameAlert').innerHTML = "Last name is required";
         valid = false;
     } else {
         document.getElementById('lnameAlert').innerHTML = "";
     }
 
-    /*********Email***** */
+                          /*********Email***** */
     var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     if (document.getElementById('email').value == "") {
 
-        document.getElementById('emailAlert').innerHTML = "*";
+        document.getElementById('emailAlert').innerHTML = "Email is required";
         valid = false;
     } else if (document.getElementById('email').value != "") {
 
@@ -73,18 +72,18 @@ function validateForm() {
             document.getElementById("emailAlert").innerHTML = "";
         }
         else {
-            document.getElementById("invalidEmail").innerHTML = "Invalid email address";
+            document.getElementById("emailAlert").innerHTML = "Invalid email address";
             valid = false;
         }
     }
 
-                                     /*********Phone****** */
+                         /*********Phone****** */
 
     var phoneformat = /^\+(?:[0-9] ?){6,14}[0-9]$/;
 
     if (document.getElementById('phone').value == "") {
 
-        document.getElementById('phoneAlert').innerHTML = "*";
+        document.getElementById('phoneAlert').innerHTML = "Phone is required";
         valid = false;
     } else if (document.getElementById('phone').value != "") {
 
@@ -92,13 +91,13 @@ function validateForm() {
             document.getElementById("phoneAlert").innerHTML = "";
         }
         else {
-            document.getElementById("invalidPhone").innerHTML = "Invalid phone number";
+            document.getElementById("phoneAlert").innerHTML = "Invalid phone number";
             valid = false;
         }
 
     }
 }   
-                           /*******************/
+                           /*********ResetBtn**********/
 
 document.getElementById("resetBtn").addEventListener("click", function () {
 
@@ -106,12 +105,11 @@ document.getElementById("resetBtn").addEventListener("click", function () {
     document.getElementById("confirm_password").style.border = "1px solid gray";
     document.getElementById("passwordAlert").innerHTML = "";
     document.getElementById("confirmPasswordAlert").innerHTML = "";
-    document.getElementById("alertMessage").innerHTML = "";
-    document.getElementById('phoneAlert').innerHTML = "";
-    document.getElementById('emailAlert').innerHTML = "";
+  //  document.getElementById('phoneAlert').innerHTML = "";
+ //   document.getElementById('emailAlert').innerHTML = "";
     document.getElementById('lnameAlert').innerHTML = "";
     document.getElementById('fnameAlert').innerHTML = "";
-    document.getElementById("invalidEmail").innerHTML = "";
-    document.getElementById("invalidPhone").innerHTML = "";
+    document.getElementById("emailAlert").innerHTML = "";
+    document.getElementById("phoneAlert").innerHTML = "";
 
 });
