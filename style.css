@@ -7,27 +7,19 @@ html {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --tone-color: #596D48;
 }
 
 .maindiv {
     display: grid;
-
-    /*   grid-template-rows: repeat(4, 198px);*/
-       grid-template-rows: repeat(4, 1fr);
-    /*  grid-template-rows: 1fr, 1fr, 1fr, 1fr;*/
- /*   grid-template-rows: repeat(4, clamp(152px, 20%, 400px));*/
-    /*  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));*/
-    /* grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));*/
-    /* grid-template-rows: repeat(auto-fit, 300px);*/
-    /*grid-template-rows: repeat(4, minmax(152px, 100%));*/
-    /*  grid-template-rows: repeat(4, minmax(152px, 1fr ));*/
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr, 1fr, 1fr;
-    /*  grid-template-columns: repeat(3, clamp(1fr, 20%, 200px));*/
-
-   /* grid-template-columns: fit-content(auto) fit-content(auto) fit-content(auto);*/
-
     width: 100vw;
-     height: 100vh;
+    height: 100vh;
 }
 
 .div1 {
@@ -67,7 +59,6 @@ h3 {
 .logo {
     height: 8rem;
     background-color: rgb(29, 30, 30, 0.5);
-    /*  opacity: 0.5;*/
     margin-top: 7rem;
     display: flex;
     flex-direction: row;
@@ -88,7 +79,7 @@ button {
     margin-top: 1rem;
     margin-right: 1rem;
     margin-left: 2rem;
-    background-color: #596D48;
+    background-color: var(--tone-color);
     color: white;
     border: 0px;
     height: 2rem;
@@ -115,7 +106,7 @@ button {
 
 a {
     text-decoration: none;
-    color: #596D48;
+    color: var(--tone-color);
 }
 
 h3 {
