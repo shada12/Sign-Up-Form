@@ -29,8 +29,9 @@ main {
     background-size: cover;
     position: relative;
 }
+
 .citation a {
-    color:var(--tone-color);
+    color: var(--tone-color);
     font-size: small;
     position: absolute;
     bottom: 0;
@@ -96,7 +97,7 @@ button {
     height: 72px;
 }
 
-.wrapper > div {
+.wrapper>div {
     width: 14rem;
     margin-top: 0.8rem;
     margin-left: 2rem;
@@ -180,7 +181,7 @@ label {
         background-color: #f3f2ef;
     }
 
-    .citation a{
-        color:white;
+    .citation a {
+        color: white;
     }
 }
