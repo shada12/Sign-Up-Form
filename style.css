@@ -23,11 +23,19 @@ main {
 }
 
 .div1 {
-    background-color: rgb(13, 251, 251);
     grid-column: 1/2;
     grid-row: 1/5;
     background-image: url("img/beach.jpg");
     background-size: cover;
+    position: relative;
+}
+.citation a {
+    color:var(--tone-color);
+    font-size: small;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 3px;
 }
 
 .div2 {
@@ -67,7 +75,7 @@ main {
 
 button {
     margin-top: 1rem;
-    margin-right: 4rem;
+    margin-right: 5rem;
     margin-left: 2rem;
     background-color: var(--tone-color);
     color: white;
@@ -85,12 +93,12 @@ button {
 .wrapper {
     display: flex;
     flex-direction: row;
-    height: 70px;
+    height: 72px;
 }
 
 .wrapper > div {
-    width: 13rem;
-    margin-top: 1rem;
+    width: 14rem;
+    margin-top: 0.8rem;
     margin-left: 2rem;
     margin-right: 1rem;
 }
@@ -101,7 +109,7 @@ a {
 }
 
 .div3 h3 {
-    padding-top: 1rem;
+    padding-top: 0.8rem;
     padding-left: 2rem;
 }
 
@@ -135,7 +143,7 @@ label {
     color: rgb(50, 49, 49);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 
     main {
         display: grid;
@@ -170,5 +178,9 @@ label {
         grid-column: 1/-1;
         grid-row: 6/-1;
         background-color: #f3f2ef;
+    }
+
+    .citation a{
+        color:white;
     }
 }
