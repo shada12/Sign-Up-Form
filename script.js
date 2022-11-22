@@ -50,11 +50,6 @@ function validatePassword(password, confirmPassword) {
 
     if (confirmPassword === "") {
         document.getElementById("confirmPasswordAlert").innerHTML = "Confirm password is required";
-    } else if (confirmPassword.length < 6) {
-        document.getElementById('confirmPasswordAlert').innerHTML = "Password length should be 6 or more";
-    }
-    else if (!confirmPassword.match(passwordformat)) {
-        document.getElementById('confirmPasswordAlert').innerHTML = "Please include at least 1 uppercase, 1 lowercase and 1 number";
     }
     else {
         document.getElementById('confirmPasswordAlert').innerHTML = "";
